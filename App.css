@@ -5,7 +5,7 @@
   --orange: #f48915;
   --darkGrey: #464D53;
   --kcalColor: #656565;
-  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  --planCard: linear-gradient(210.41deg, #f85258 1.14%, #ffa739 100.75%);
   --appColor:  #3c3f45;
 }
 
@@ -17,7 +17,6 @@
   /* display: flex;
   gap: 6rem; */
   overflow: hidden;
-  height: 100vh;
 }
 
 ::-webkit-scrollbar{
