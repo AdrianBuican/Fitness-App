@@ -66,9 +66,16 @@ const Hero = () => {
             {/* kcal */}
             <div className="calories">
                <img src={Calories}/>
-               <div>
-                  <span>Calories Burned: </span>
-                  <span>???</span>
+               <div> Hover to check how many kcal you can burn with our:
+                  <div>Novice Workout:
+                     <span className="letter-swap"> ???</span><span> kcal burned</span>
+                  </div>
+                  <div>Intermediate Workout:
+                     <span className="letter-swap"> ???</span><span> kcal burned</span>
+                  </div>
+                  <div>Advanced Workout:
+                     <span className="letter-swap"> ???</span><span> kcal burned</span>
+                  </div>
                </div>
             </div>
          </div>
