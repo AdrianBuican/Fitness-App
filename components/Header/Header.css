@@ -20,3 +20,7 @@
    cursor: pointer;
    color: var(--orange);
 }
+
+li{
+   font-size: 1.2rem;
+}
