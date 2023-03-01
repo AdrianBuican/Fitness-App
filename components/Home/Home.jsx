@@ -1,30 +1,31 @@
 import React from 'react'
-import './Hero.css'
+import './Home.css'
 import Header from '../Header/Header.jsx'
 import Heart from '../../assets/heart.png'
-import hero_image from '../../assets/hero_image.png'
-import hero_image_back from '../../assets/hero_image_back.png'
+import Stripes from '../../assets/stripes.png'
 import Calories from '../../assets/calories.png'
+import FitGuy from '../../assets/fit-guy.png'
+import FitGal from '../../assets/fit-gal.png'
 
-const Hero = () => {
+const Home = () => {
    return(
-      <div className="hero">
-         <div className="left-h">
+      <div className="home">
+         <div className="home-left">
             <Header/>
             {/* The best ad */}
-            <div className="the-best-ad">
+            <div className="ad">
                <div></div>
                <span>The Only Fitness App You Need</span>
             </div>
 
          {/* Hero Heading */}
-            <div className="hero-text">
+            <div className="home-text">
                <div>
                   <span className="stroke-text">SCULPT </span>
                   <span>Your Body </span>
                   <div>Like a Greek Statue</div>
                </div>
-               <div className="hero-subtitle">
+               <div className="home-subtitle">
                   We'll help you reach your ideal shape & enjoy life to the fullest!
                </div>
             </div>
@@ -46,23 +47,23 @@ const Hero = () => {
             </div>
 
             {/* Buttons */}
-            <div className="hero-buttons">
+            <div className="home-buttons">
                <button className="btn">Start Now</button>
                <button className="btn">Learn More</button>
             </div>
          </div>
 
-         <div className="right-h">
+         <div className="home-right">
             <button className="btn">Join Now</button>
             <div className="heart-rate">
                <img src={Heart}/>
-               <span>Heart Rate</span><span>116 BPM</span>
+               <span>Heart Rate</span><span>124 BPM</span>
             </div>
 
-            {/* Hero images */}
-            <img src={hero_image} className="hero-image"/>
-            <img src={hero_image_back} className="hero-image-back"/>
-
+            {/* Fit images */}
+            <img src={FitGuy} className="fit-guy"/>
+            <img src={Stripes} className="stripes"/>
+            <img src={FitGal} className="fit-gal"/>
             {/* kcal */}
             <div className="calories">
                <img src={Calories}/>
@@ -75,4 +76,4 @@ const Hero = () => {
    )
 }
 
-export default Hero
+export default Home
