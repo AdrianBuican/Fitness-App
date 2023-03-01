@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+import './home.css'
 import Header from '../Header/Header.jsx'
 import Heart from '../../assets/heart.png'
 import Stripes from '../../assets/stripes.png'
