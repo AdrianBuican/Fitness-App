@@ -1,0 +1,83 @@
+.plans-container{
+   margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+   position: relative;
+}
+
+.plans{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 3.8rem;
+}
+
+/* Each Plan Card */
+
+.plan{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   background: var(--kcalColor);
+   padding: 1rem;
+   border-radius: 7px;
+   font-size: 1.4rem;
+   font-weight: bold;
+   color: white;
+   width: 21rem;
+   transition: 0.3s;
+}
+
+.plan > svg {
+   width: 2rem;
+   height: 2rem;
+   fill: var(--rose);
+}
+
+.plan:nth-child(2){
+   background: var(--gradientOrange);
+}
+
+.plan:nth-child(2) > svg{
+   fill: white;
+}
+
+.plan > :nth-child(2){
+   font-size: 1.7rem;
+   text-decoration: underline;
+}
+.plan > :nth-child(3){
+   font-size: 1.8rem;
+}
+
+.plan:hover{
+   cursor: pointer;
+   transform: scale(1.05);
+   background: var(--darkGray);
+   color: var(--orange);
+}
+
+.plan:nth-child(2):hover{
+   background: var(--gradientOrange);
+   color: #333;
+   box-shadow: 0 0 15px gold;
+}
+
+/* Each Feature of Plan Cards */
+
+.features{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.feature{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+

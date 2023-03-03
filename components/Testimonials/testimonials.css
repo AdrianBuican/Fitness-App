@@ -1,0 +1,79 @@
+.testim-title{
+   font-size: 4rem;
+   text-align: center;
+   margin-top: 2rem;
+}
+
+.testim{
+   margin-top: 2rem;
+   display: flex;
+   gap: 7rem;
+   padding: 0.5rem 2rem;
+   position: relative;
+}
+
+.testim-left{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   font-size: 3rem;
+   font-weight: bold;
+   gap: 0.5rem;
+   margin-left: 3rem;
+   align-items: center;
+}
+
+.customer-reviews{
+   font-size: 1.5rem;
+   line-height: 45px;
+   font-style:italic;
+}
+
+.testim-right{
+   flex: 1;
+   position: relative;
+   top: 2rem;
+}
+
+.testim-right > :nth-child(1){
+   position: absolute;
+   border: 3px solid var(--rose);
+   background: transparent;
+   width: 20rem;
+   height: 25rem;
+   top: -1.5rem;
+   left: 1.5rem;
+   z-index: -1;
+}
+.testim-right > :nth-child(2){
+   position: absolute;
+   border: 3px solid var(--orange);
+   background: var(--orange);
+   width: 20rem;
+   height: 25rem;
+   left: -1.5rem;
+   top: 1.5rem;
+   z-index: -1;
+}
+
+.testim-right > img{
+   width: 20rem;
+   height: 25rem;
+   object-fit: cover;
+}
+
+.arrows{
+   display: flex;
+   gap: 1rem;
+   position: absolute;
+   left: -9rem;
+   top: 18rem;
+}
+.arrows > *{
+   width: 2.5rem;
+   transition: .4s;
+}
+.arrows > *:hover{
+   cursor: pointer;
+   transform: scale(1.15);
+}
