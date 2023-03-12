@@ -1,16 +1,17 @@
 .home{
    display: flex;
    justify-content: space-between;
-   height: 100vh;
+}
+li{
+   text-align: center;
 }
 
 .home-left{
-   padding: 1.5rem 2rem;
+   padding: 1rem 2rem;
    flex: 3;
    display: flex;
    gap: 1.5rem;
    flex-direction: column;
-   /* the .left-h contains <Header/> (img + ul), a div and a span; aligning them as columns will put the <Header/> in the first column, but the header has a display of flex so the img and the ul will be aligned horizontally */
 }
 
 .home-right{
@@ -19,44 +20,9 @@
    background: var(--orange);
 }
 
-.join-right:hover{
-   box-shadow: 0px 0px 25px white;
-}
-
-.ad{
-   border: 3px solid gray;
-   color: white;
-   margin-top: 2rem;
-   border-radius: 3rem;
-   width: fit-content;
-   padding: 10px 5px;
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-   font-size: 1.3rem;
-}
-
-.ad>span{
-   z-index:2;
-   padding: 0 5px;
-}
-.ad>div:hover{
-   box-shadow: 0 0 15px white;
-}
-
-.ad>div{
-   position: absolute;
-   background: var(--orange);
-   height: 80%;
-   width: 5rem;
-   left: 5px;
-   border-radius: 3rem;
-   z-index:1;
-}
-
+/* Left-side text and buttons */
 .home-text{
-   display: grid;
+   display: flex;
    flex-direction: column;
    gap: 1.5rem;
    font-size: 4rem;
@@ -65,7 +31,14 @@
    color: #dddbd4;
 }
 
-.home-subtitle{
+#sculpt{
+   width: fit-content;
+   font-size: 5rem;
+   font-weight: normal;
+   text-decoration: underline;
+}
+
+.home-text-subtitle{
    font-size: 1.75rem;
    font-weight: bold;
    color: #dddbd4;
@@ -80,20 +53,21 @@
 .figures>div{
    display: flex;
    flex-direction: column;
-   background: var(--orange);
+   background: transparent;
+   border: 2px solid var(--orange);
    border-radius: 8px;
    padding: 10px;
 }
 
 .figures>div>span:nth-of-type(1){
-   color: #333;
+   color: white;;
    font-size: 1.8rem;
    font-weight: bold;
    text-align: center;
 }
 
 .figures>div>span:nth-of-type(2){
-   color: #333;
+   color: white;
    font-size: 1.3rem;
    font-weight: bold;
    text-align: center;
@@ -106,12 +80,13 @@
 
 .home-buttons>:nth-child(1){
    border: 2px solid var(--orange);
-   background: #333;
-   color: var(--orange)
+   background: var(--orange);
+   color: #333;
 }
 .home-buttons>:nth-child(2){
-   color: #333;
-   background: var(--orange);
+   color: white;
+   background: transparent;
+   border: 2px solid var(--orange);
 }
 
 .home-right>.btn{
@@ -122,6 +97,30 @@
    color: var(--orange);
 }
 
+/* Hero Images */
+.fit-guy{
+   position: absolute;
+   bottom: 0;
+   right: 9.7rem;
+   width: 27rem;
+}
+
+.fit-gal{
+   position: absolute;
+   width: 17.5rem;
+   right: 1.5rem;
+   bottom: 0;
+}
+
+.stripes{
+   position: absolute;
+   top: 6rem;
+   right: 30rem;
+   z-index: -1;
+   width: 15rem;
+}
+
+/* Heart Rate */
 .heart-rate{
    display: flex;
    flex-direction: column;
@@ -132,8 +131,18 @@
    align-items: center;
    border-radius: 5px;
    position: absolute;
-   right: 26rem;
-   top: 2rem;
+   left: 1rem;
+   top: 1.5rem;
+}
+
+.heart{
+   width: 3.3rem;
+   height: 3.3rem;
+   animation: scale 1s linear infinite;
+}
+
+.heart:hover{
+   transform: scale(2)
 }
 
 .heart-rate>:nth-child(2){ 
@@ -145,28 +154,19 @@
    font-size: 1.5rem;
 }
 
-.fit-guy{
-   position: absolute;
-   bottom: 0;
-   right: 9.7rem;
-   width: 27.5rem;
+@keyframes scale{
+   0%{
+      transform: scale(1)
+   }
+   50%{
+      transform: scale(1.1)
+   }
+   100%{
+      transform: scale(1)
+   }
 }
 
-.fit-gal{
-   position: absolute;
-   width: 18rem;
-   right: 1.5rem;
-   bottom: 0;
-}
-
-.stripes{
-   position: absolute;
-   top: 8rem;
-   right: 30rem;
-   z-index: -1;
-   width: 15rem;
-}
-
+/* Calories */
 .calories{
    display: flex;
    background: var(--kcalColor);
@@ -175,8 +175,8 @@
    align-items: center;
    
    position: absolute;
-   top: 30rem;
-   right: 29rem;
+   top: 28rem;
+   right: 28rem;
    padding:7px 0 7px 7px;
 }
 
@@ -193,7 +193,7 @@
 
 .calories > div >:nth-child(1){
    text-align: center;
-   color: var(--rose);
+   color: var(--persimmon);
    font-weight: bold;
    font-size: 1.2rem;
 }
@@ -201,4 +201,111 @@
    text-align: center;
    font-size: 1.1rem;
    color: var(--lightGray);
+}
+
+@media screen and (max-width: 1024px){
+   .home-left{
+      padding: 0.5rem 1rem;
+      gap: 1.5rem;
+   }
+   .home-text{
+      gap: 0.7rem;
+      font-size: 2.3rem;
+   }
+   
+   #sculpt{
+      font-size: 3rem;
+   }
+
+   .home-text-subtitle{
+      font-size: 1.25rem;
+   }
+   
+   .figures{
+      gap: 1rem;
+   }
+   
+   .figures>div{
+      padding: 7px;
+   }
+   
+   .figures>div>span:nth-of-type(1){
+      font-size: 1.2rem;
+   }
+   
+   .figures>div>span:nth-of-type(2){
+      font-size: 1rem;
+   }
+   
+   .home-buttons{
+      gap: 0.7rem;
+   }
+
+   .home-right>.btn{
+      position: absolute;
+      right: 1rem;
+      top: 1.5rem;
+      background: #333;
+      color: var(--orange);
+   }
+
+   .fit-guy{
+      bottom: 0;
+      right: 4rem;
+      width: 17rem;
+   }
+   
+   .fit-gal{
+      width: 11rem;
+      right: 0;
+      bottom: 0;
+   }
+   
+   .stripes{
+      top: 6rem;
+      right: 12rem;
+      z-index: -1;
+      width: 10rem;
+   }
+
+   .heart-rate{
+      gap: .25rem;
+      padding: 0.5rem;
+      left: 1rem;
+      top: 1.5rem;
+   }
+   
+   .heart{
+      width: 2rem;
+      height: 2rem;
+   }
+   
+   .heart-rate>:nth-child(2){ 
+      font-size: 1rem;
+   }
+   .heart-rate>:nth-child(3){ 
+      color: white;
+      font-size: 1.1rem;
+   }
+   .calories{
+      top: 17rem;
+      right: 16rem;
+      padding: 5px 0 5px 5px;
+      width: 12vw;
+   }
+   
+   .calories > img{
+      width: 0;
+      height: 0;
+   }
+   .calories > div{
+      font-size: 1rem;
+   }
+   
+   .calories > div >:nth-child(1){
+      font-size: 1.1rem;
+   }
+   .calories > div >:nth-child(2){
+      font-size: 1.1rem;
+   }
 }
