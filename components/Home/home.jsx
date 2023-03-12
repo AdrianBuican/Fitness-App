@@ -1,31 +1,26 @@
 import React from 'react'
 import './home.css'
-import Header from '../Header/Header.jsx'
-import Heart from '../../assets/heart.png'
+import Header from '../Header/header.jsx'
 import Stripes from '../../assets/stripes.png'
+import Heart from '../../assets/heart.png'
 import Calories from '../../assets/calories.png'
 import FitGuy from '../../assets/fit-guy.png'
 import FitGal from '../../assets/fit-gal.png'
+import LetterSwap from './letterSwap.js'
 
 const Home = () => {
    return(
       <div className="home">
          <div className="home-left">
             <Header/>
-            {/* The best ad */}
-            <div className="ad">
-               <div></div>
-               <span>The Only Fitness App You Need</span>
-            </div>
-
          {/* Hero Heading */}
             <div className="home-text">
-               <div>
-                  <span className="stroke-text">SCULPT </span>
-                  <span>Your Body </span>
+               <div className="home-text-title">
+                  <div id="sculpt" onMouseOver={LetterSwap}>SCULPTING</div>
+                  <span> Your Body </span>
                   <div>Like a Greek Statue</div>
                </div>
-               <div className="home-subtitle">
+               <div className="home-text-subtitle">
                   We'll help you reach your ideal shape & enjoy life to the fullest!
                </div>
             </div>
@@ -56,15 +51,15 @@ const Home = () => {
          <div className="home-right">
             <button className="btn">Join Now</button>
             <div className="heart-rate">
-               <img src={Heart}/>
-               <span>Heart Rate</span><span>124 BPM</span>
+               <img src={Heart} alt="Heart Image" className="heart" />
+               <span>Heart Rate</span><span>115 BPM</span>
             </div>
 
             {/* Fit images */}
-            <img src={FitGuy} className="fit-guy"/>
-            <img src={Stripes} className="stripes"/>
-            <img src={FitGal} className="fit-gal"/>
-            {/* kcal */}
+            <img src={FitGuy} className="fit-guy" alt="Fit Guy"/>
+            <img src={Stripes} className="stripes" alt="Orange Stripes"/>
+            <img src={FitGal} className="fit-gal" alt="Fit Girl"/>
+            {/* Calories */}
             <div className="calories">
                <img src={Calories}/>
                <div> You burned:
