@@ -16,17 +16,17 @@ const Workouts = () =>{
 
             {/* Program Categories */}
             <div className="workouts-categories">
-               {programsData.map((program) => (
-                  <div className="category">
+               {programsData.map((program, name) => (
+                  <div className="category" key={name}>
                      <span>{program.image}</span>
                      <span>{program.details}</span>
                      <div className="join-now">
-                        <span>Join Now</span>
-                        <img src={RightArrow}/>
+                     <span>Join Now</span>
+                     <img src={RightArrow} alt="Right Arrow"/>
                      </div>
                   </div>
                ))}
-            </div>
+               </div>
          </div>
          <div className="hr-container">
             <hr className=""/>
