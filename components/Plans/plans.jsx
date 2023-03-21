@@ -11,6 +11,7 @@ const Plans = () => {
             <span>CHECK OUT OUR</span>
             <span className="stroke-text-orange">PLANS</span>
          </div>
+         
 
          {/* Plan Cards */}
          <div className="plans">
@@ -24,10 +25,9 @@ const Plans = () => {
                   <div className="features">
                      {plan.features.map((feature, i) => 
                      (
-                        <div className="feature">
-                           <img src={whiteCheck} alt="" />
-                           <span key={i}>{feature}</span>
-                           {/* key={i} so it doesn't give a warning in the console */}
+                        <div className="feature" key={i}>
+                           <img src={whiteCheck} alt="Check" />
+                           <span>{feature}</span>
                         </div>
                      ))}
                   </div>
