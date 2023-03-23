@@ -22,6 +22,9 @@
    margin-left: 3rem;
    align-items: center;
 }
+#sculpt2{
+   font-size: 4.5rem;
+}
 
 .customer-reviews{
    font-size: 1.5rem;
@@ -37,7 +40,7 @@
 
 .testim-right > :nth-child(1){
    position: absolute;
-   border: 3px solid var(--rose);
+   border: 3px solid var(--persimmon);
    background: transparent;
    width: 20rem;
    height: 25rem;
@@ -72,8 +75,27 @@
 .arrows > *{
    width: 2.5rem;
    transition: .4s;
+   border-radius: 5px;
 }
 .arrows > *:hover{
    cursor: pointer;
    transform: scale(1.15);
+}
+.arrows > *:active{
+   cursor: pointer;
+   transform: scale(0.8)
+}
+
+.testim-transition{
+   animation: testimonials 0.8s ease-out;
+}
+@keyframes testimonials {
+   from {
+      opacity: 0.3;
+      transform: translateX(-3vw)
+   }
+   to {
+      opacity: 1;
+      transform:translateX(0vw)
+   }
 }
